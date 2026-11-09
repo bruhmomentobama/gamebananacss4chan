@@ -1,0 +1,1513 @@
+/*
+RedlineLucario - Classic 4chan Beige Board Uberstyle
+Ripped from 4chan Yotsuba / beige board aesthetic.
+Background: #FFFFEE
+Greentext: #789922
+Links: classic blue
+Font: Arial / system sans, small size
+*/
+
+:root {
+    --bg: #FFFFEE;
+    --text: #800000;
+    --greentext: #789922;
+    --link: #0000EE;
+    --link-visited: #551A8B;
+    --link-hover: #DD0000;
+    --post-bg: #FFFFEE;
+    --border: #D9BFB7;
+    --header-bg: #F0E0D6;
+}
+
+/* Force classic beige everywhere */
+html,
+body,
+#BodyWrapper,
+#MainContent,
+#ContentGrid,
+#PageFooter,
+row,
+column,
+.PageModule,
+.PageModule > .Content,
+.Module > .Content,
+article.PageModule {
+    background-color: var(--bg) !important;
+    background-image: none !important;
+    color: var(--text) !important;
+}
+
+body {
+    font-family: Arial, Helvetica, "MS PGothic", sans-serif !important;
+    font-size: 13px !important;
+    line-height: 1.4;
+    color: var(--text);
+    -webkit-font-smoothing: none;
+}
+
+/* Modules / "posts" */
+.PageModule > .Content,
+.Module > .Content {
+    background: var(--post-bg) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 8px !important;
+}
+
+/* Module titles */
+.PageModule > h2,
+.ModuleTitle,
+.PageModule header {
+    background: var(--header-bg) !important;
+    color: var(--text) !important;
+    border-bottom: 1px solid var(--border) !important;
+    font-family: Tahoma, Arial, sans-serif !important;
+    font-weight: bold;
+    font-size: 14px !important;
+    letter-spacing: 0;
+    text-transform: none !important;
+    text-shadow: none !important;
+    padding: 4px 8px !important;
+}
+
+/* Page title */
+#PageTitle,
+h1.PageTitle,
+.PageTitle {
+    color: var(--text) !important;
+    font-family: Tahoma, Arial, sans-serif !important;
+    font-weight: bold;
+    font-size: 20px !important;
+    text-shadow: none !important;
+    letter-spacing: -0.5px;
+    text-transform: none !important;
+}
+
+/* Links - classic blue */
+a {
+    color: var(--link) !important;
+    text-decoration: underline !important;
+    text-shadow: none !important;
+}
+a:visited {
+    color: var(--link-visited) !important;
+}
+a:hover {
+    color: var(--link-hover) !important;
+}
+
+/* Greentext - style quote-like elements */
+blockquote,
+.quote,
+span.quote,
+.greentext,
+[class*="quote"] {
+    color: var(--greentext) !important;
+    font-family: inherit !important;
+}
+
+/* Attempt to style lines that start with > if they are in paragraphs or pre */
+p::before,
+div::before,
+span::before {
+    /* Note: pure CSS can't reliably detect text content starting with > 
+       without modern :has() + more advanced selectors or JS.
+       This is a best-effort for common quote containers. */
+}
+
+/* Force greentext color on any element whose content we can target via common classes */
+.Post .Content,
+.PostMessage,
+.Bio .Content,
+.UserTitle,
+.KeyInfo,
+#Bio,
+#Identity {
+    /* Users can manually start lines with > and they will still be maroon unless wrapped.
+       For true greentext, content should be in blockquote or we accept the limitation. */
+}
+
+/* Navigation tabs - keep simple and 4chan-like */
+#SubNavigator,
+#SubNavigator ul,
+#SubNavigator a {
+    background: var(--bg) !important;
+    color: var(--link) !important;
+    font-family: Arial, sans-serif !important;
+    font-size: 13px !important;
+    letter-spacing: 0 !important;
+    text-transform: none !important;
+    text-shadow: none !important;
+    border: none !important;
+}
+#SubNavigator li.ActiveEntry a,
+#SubNavigator li.Active a {
+    color: var(--link-hover) !important;
+    font-weight: bold;
+    text-decoration: underline !important;
+}
+#SubNavigator li.ActiveEntry a::after {
+    display: none !important;
+}
+
+/* Buttons and inputs - plain */
+button,
+.Button,
+input,
+textarea,
+select {
+    background: #FFFFFF !important;
+    border: 1px solid #999 !important;
+    color: #000 !important;
+    font-family: Arial, sans-serif !important;
+    font-size: 13px !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+}
+button:hover {
+    background: #EEEEEE !important;
+}
+
+/* Remove previous neon effects */
+body::before,
+body::after {
+    display: none !important;
+}
+
+/* Logo - leave mostly alone or desaturate */
+#SiteLogo img {
+    filter: none !important;
+    max-width: unset;
+}
+
+/* Stats and identity text */
+.UserTitle,
+.KeyInfo,
+.KeyInfo *,
+dt,
+dd,
+.Label,
+.StatLabel {
+    color: var(--text) !important;
+    text-shadow: none !important;
+    font-family: Arial, sans-serif !important;
+}
+
+/* Scrollbar - simple */
+::-webkit-scrollbar {
+    width: 12px;
+    background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+    background: #C0C0C0;
+    border: 1px solid #999;
+}
+
+/* ===== 4chan accuracy upgrades ===== */
+
+/* Anonymous / other users name color — usernames only */
+.name,
+.postername,
+.Username,
+.MemberName,
+a.Username,
+a[href*="/members/"] {
+    color: #117743 !important;
+    text-shadow: none !important;
+}
+
+/* Submission / thread-number style links */
+a[href*="/mods/"],
+a[href*="/wips/"],
+a[href*="/maps/"],
+a[href*="/sounds/"],
+a[href*="/tools/"],
+a[href*="/gamefiles/"],
+a[href*="/requests/"],
+a[href*="/threads/"],
+a[href*="gamebanana.com/"][href*="/"] {
+    color: #0000EE !important;
+}
+a[href*="/mods/"]:hover,
+a[href*="/wips/"]:hover,
+a[href*="/maps/"]:hover,
+a[href*="/sounds/"]:hover,
+a[href*="/tools/"]:hover,
+a[href*="/gamefiles/"]:hover,
+a[href*="/requests/"]:hover,
+a[href*="/threads/"]:hover {
+    color: #DD0000 !important;
+}
+
+/* Blue only for POST / REPLY style buttons */
+button:not([class*="Reply"]):not([class*="Comment"]):not([class*="Post"]),
+.Button:not([class*="Reply"]):not([class*="Comment"]):not([class*="Post"]),
+input[type="submit"]:not([value*="Reply"]):not([value*="Post"]):not([value*="Comment"]) {
+    background: #F0E0D6 !important;
+    color: #800000 !important;
+    border: 1px solid #D9BFB7 !important;
+}
+
+/* Force blue on reply/comment/post buttons */
+button[class*="Reply"],
+button[class*="Comment"],
+button[class*="Post"],
+.Button[class*="Reply"],
+.Button[class*="Comment"],
+a[href*="reply"],
+a[href*="comment"] {
+    background: #0000EE !important;
+    color: #FFFFFF !important;
+    border: 1px solid #0000AA !important;
+}
+
+/* Expand replies button replacement */
+img.extButton,
+img[src*="expand"],
+img[alt="+"],
+.expbtn {
+    content: url("https://s.4cdn.org/image/buttons/futaba/post_expand_plus.png") !important;
+    width: 18px !important;
+    height: 18px !important;
+}
+
+/* Hong Kong flag replacement (tiny) */
+img[src*="flag"],
+img[alt*="Hong Kong"],
+img[title*="Hong Kong"],
+.flag-hk,
+.FlagHK {
+    content: url("https://s.4cdn.org/image/country/hk.gif") !important;
+    width: 16px !important;
+    height: 11px !important;
+    vertical-align: middle;
+}
+
+/* Globe icon in contact -> 4chan favicon */
+img[src*="globe"],
+img[alt*="website"],
+img[title*="website"],
+.ContactIcon img,
+.IconGlobe {
+    content: url("https://s.4cdn.org/image/favicon.ico") !important;
+    width: 16px !important;
+    height: 16px !important;
+}
+
+/* Nav / menu UI 4chan style */
+#PrimaryNav,
+#SecondaryNav,
+#SubNavigator,
+.NavPane,
+.Menu,
+.DropdownMenu {
+    background: #FFFFEE !important;
+    border-color: #D9BFB7 !important;
+    color: #800000 !important;
+}
+#PrimaryNav a,
+#SecondaryNav a,
+#SubNavigator a {
+    color: #0000EE !important;
+    text-decoration: underline !important;
+}
+#PrimaryNav a:hover,
+#SecondaryNav a:hover,
+#SubNavigator a:hover {
+    color: #DD0000 !important;
+}
+
+/* Force Core Stats / medal / points boxes into beige */
+.Stat,
+.StatBox,
+.CoreStat,
+.CoreStats .Content > div,
+.PageModule .Content > div[style*="background"],
+.PageModule .Content > div[class*="Stat"],
+.Medal,
+.PointBox,
+.StatsBox {
+    background: #FFFFEE !important;
+    border: 1px solid #D9BFB7 !important;
+    color: #800000 !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+}
+
+.Stat span,
+.Stat div,
+.CoreStat span,
+.CoreStat div,
+.StatBox span,
+.StatBox div {
+    color: #800000 !important;
+    background: transparent !important;
+}
+
+/* Online / status pills */
+.Status,
+.Online,
+[class*="Status"],
+[class*="Online"] {
+    background: #F0E0D6 !important;
+    color: #800000 !important;
+    border: 1px solid #D9BFB7 !important;
+    border-radius: 0 !important;
+}
+
+/* NSFW / Shown tags */
+.NSFW,
+.Shown,
+[class*="Tag"],
+[class*="Label"] {
+    background: #F0E0D6 !important;
+    color: #800000 !important;
+    border: 1px solid #D9BFB7 !important;
+    border-radius: 0 !important;
+}
+
+/* Profile name stays maroon */
+h1,
+.PageTitle,
+.MemberName,
+#PageTitle {
+    color: #800000 !important;
+}
+
+/* Force remaining dark boxes into beige */
+div[style*="background-color"],
+div[style*="background:#"],
+.PageModule .Content > div {
+    background-color: #FFFFEE !important;
+}
+
+/* ===== FORCE CORRECT COLORS (later = higher cascade) ===== */
+
+/* Usernames must be the dark green */
+a.Username,
+a[href*="/members/"],
+.Username,
+.MemberName a,
+.name a,
+.postername {
+    color: #117743 !important;
+    text-shadow: none !important;
+}
+
+/* Submission / mod links must be blue, hover red */
+a[href*="/mods/"],
+a[href*="/wips/"],
+a[href*="/maps/"],
+a[href*="/sounds/"],
+a[href*="/tools/"],
+a[href*="/gamefiles/"],
+a[href*="/requests/"],
+a[href*="/threads/"],
+a[href*="gamebanana.com/"][href*="/mods"],
+a[href*="gamebanana.com/"][href*="/wips"] {
+    color: #0000EE !important;
+}
+a[href*="/mods/"]:hover,
+a[href*="/wips/"]:hover,
+a[href*="/maps/"]:hover,
+a[href*="/sounds/"]:hover,
+a[href*="/tools/"]:hover,
+a[href*="/gamefiles/"]:hover,
+a[href*="/requests/"]:hover,
+a[href*="/threads/"]:hover {
+    color: #DD0000 !important;
+}
+
+/* Content Cluster / Card Stack = 4chan reply style */
+.Content.Cluster,
+.Card.Stack,
+.ContentCluster,
+.CardStack,
+article.Card,
+.SubmissionCard,
+.PostCard {
+    background: #FFFFEE !important;
+    border: 1px solid #D9BFB7 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 6px !important;
+    margin-bottom: 4px !important;
+}
+
+/* Load Replies button -> 4chan expand icon */
+.ExtendedContentButton,
+button.ExtendedContentButton,
+.ExtendedContentButton span,
+.ShowContentIcon {
+    background: transparent !important;
+    border: none !important;
+    color: transparent !important;
+    font-size: 0 !important;
+    width: 18px !important;
+    height: 18px !important;
+    padding: 0 !important;
+    position: relative;
+}
+.ExtendedContentButton::before,
+button.ExtendedContentButton::before {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: url("https://s.4cdn.org/image/buttons/futaba/post_expand_plus.png") no-repeat center / contain;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* ===== FINAL OVERRIDE - must be last ===== */
+
+/* Usernames green, no underline */
+a.Username,
+a[href*="/members/"],
+.Username,
+.MemberName a,
+.name a,
+.postername,
+a.Username:link,
+a[href*="/members/"]:link {
+    color: #117743 !important;
+    text-decoration: none !important;
+    text-shadow: none !important;
+}
+
+/* Submission links blue, no underline */
+a[href*="/mods/"],
+a[href*="/wips/"],
+a[href*="/maps/"],
+a[href*="/sounds/"],
+a[href*="/tools/"],
+a[href*="/gamefiles/"],
+a[href*="/requests/"],
+a[href*="/threads/"],
+a[href*="gamebanana.com/"][href*="/mods"],
+a[href*="gamebanana.com/"][href*="/wips"] {
+    color: #0000EE !important;
+    text-decoration: none !important;
+}
+a[href*="/mods/"]:hover,
+a[href*="/wips/"]:hover,
+a[href*="/maps/"]:hover,
+a[href*="/sounds/"]:hover,
+a[href*="/tools/"]:hover,
+a[href*="/gamefiles/"]:hover,
+a[href*="/requests/"]:hover,
+a[href*="/threads/"]:hover {
+    color: #DD0000 !important;
+    text-decoration: none !important;
+}
+
+/* Kill underlines on nav and general links too */
+#SubNavigator a,
+#PrimaryNav a,
+#SecondaryNav a,
+a {
+    text-decoration: none !important;
+}
+
+/* ===== FINAL OVERRIDE - highest specificity, last in file ===== */
+
+/* Usernames: dark green, no underline */
+html body a.Username,
+html body a[href*="/members/"],
+html body .Username,
+html body .MemberName a,
+html body .name a,
+html body .postername,
+html body a.Username:visited,
+html body a[href*="/members/"]:visited {
+    color: #117743 !important;
+    text-shadow: none !important;
+    text-decoration: none !important;
+    border-bottom: none !important;
+}
+
+/* Submission / mod links: blue, no underline, hover red */
+html body a[href*="/mods/"],
+html body a[href*="/wips/"],
+html body a[href*="/maps/"],
+html body a[href*="/sounds/"],
+html body a[href*="/tools/"],
+html body a[href*="/gamefiles/"],
+html body a[href*="/requests/"],
+html body a[href*="/threads/"],
+html body a[href*="gamebanana.com/"][href*="/mods"],
+html body a[href*="gamebanana.com/"][href*="/wips"],
+html body a[href*="/mods/"]:visited,
+html body a[href*="/wips/"]:visited {
+    color: #0000EE !important;
+    text-decoration: none !important;
+    border-bottom: none !important;
+}
+
+html body a[href*="/mods/"]:hover,
+html body a[href*="/wips/"]:hover,
+html body a[href*="/maps/"]:hover,
+html body a[href*="/sounds/"]:hover,
+html body a[href*="/tools/"]:hover,
+html body a[href*="/gamefiles/"]:hover,
+html body a[href*="/requests/"]:hover,
+html body a[href*="/threads/"]:hover {
+    color: #DD0000 !important;
+    text-decoration: none !important;
+}
+
+/* Kill underlines on the broad reset elements that are links */
+html body a,
+html body a:visited {
+    text-decoration: none !important;
+}
+
+/* ===== FORCE MAROON on Buddies / Medals / Points / Card Stack links ===== */
+html body a[href*="/members/network/buddies/"],
+html body a[href*="/members/stats/medals/"],
+html body a[href*="/members/stats/points/"],
+html body a.Card.Stack,
+html body a[class*="Card"][class*="Stack"],
+html body a.Card.Stack:visited,
+html body a[href*="/members/network/subscribers/"],
+html body a[href*="/members/network/buddies/"]:visited,
+html body a[href*="/members/stats/medals/"]:visited,
+html body a[href*="/members/stats/points/"]:visited {
+    color: #800000 !important;
+    text-decoration: none !important;
+    text-shadow: none !important;
+}
+html body a[href*="/members/network/buddies/"]:hover,
+html body a[href*="/members/stats/medals/"]:hover,
+html body a[href*="/members/stats/points/"]:hover,
+html body a.Card.Stack:hover {
+    color: #DD0000 !important;
+    text-decoration: none !important;
+}
+
+/* ===== MODULE TITLES MUST STAY MAROON ===== */
+html body .PageModule > h2,
+html body .ModuleTitle,
+html body .PageModule header,
+html body h2,
+html body .PageModule h2 a,
+html body .PageModule > h2 a,
+html body a[href*="/members/network/buddies/"],
+html body a[href*="/members/stats/medals/"],
+html body a[href*="/members/stats/points/"],
+html body a[href*="/members/network/subscribers/"],
+html body .PageModule header a {
+    color: #800000 !important;
+    text-decoration: none !important;
+    text-shadow: none !important;
+}
+
+/* Real usernames in comments / posts stay green */
+html body a.MemberLink,
+html body a[href*="/members/"][class*="Member"],
+html body .Poster a,
+html body header.PostHeader a,
+html body .PostHeader .MemberLink,
+html body a.MemberLink span {
+    color: #117743 !important;
+    text-decoration: none !important;
+}
+
+/* ===== EXACT MODULE TITLE LINKS (Buddies, Medals, Points, etc.) ===== */
+html body module h2 a,
+html body .PageModule h2 a,
+html body .StrangeBerryModule h2 a,
+html body #BuddiesModule h2 a,
+html body #MedalsModule h2 a,
+html body #PointsModule h2 a,
+html body #SubmissionsModule h2 a,
+html body #CoreStatsModule h2 a,
+html body module > h2 > a[href*="/members/"] {
+    color: #800000 !important;
+    text-decoration: none !important;
+    text-shadow: none !important;
+    font-weight: bold !important;
+}
+
+/* Hover stays red */
+html body module h2 a:hover,
+html body .PageModule h2 a:hover {
+    color: #DD0000 !important;
+}
+
+/* ===== Hong Kong flag next to Country in Bio ===== */
+html body #Bio dd:has(span:contains("Hong Kong")),
+html body #Bio dd span:contains("Hong Kong") {
+    /* fallback if :contains not supported */
+}
+
+html body #Bio dd:nth-of-type(2)::before,
+html body .GenericKeyListModule dd:has(+ *),
+html body #Bio dt:contains("Country") + dd::before {
+    content: url("https://s.4cdn.org/image/country/hk.gif");
+    display: inline-block;
+    width: 16px;
+    height: 11px;
+    margin-right: 4px;
+    vertical-align: middle;
+}
+
+/* More reliable: target any dd that follows a Country dt */
+html body #Bio dt + dd::before,
+html body .GenericKeyListModule dt + dd::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 11px;
+    margin-right: 4px;
+    vertical-align: middle;
+    background: url("https://s.4cdn.org/image/country/hk.gif") no-repeat center / contain;
+}
+
+/* ===== Reliable HK flag on Country row ===== */
+html body #Bio dt:nth-of-type(2) + dd::before,
+html body .GenericKeyListModule dt:nth-of-type(2) + dd::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 11px;
+    margin-right: 4px;
+    vertical-align: middle;
+    background-image: url("https://s.4cdn.org/image/country/hk.gif");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+/* ===== ONLY Country gets the HK flag — kill the others ===== */
+html body #Bio dt + dd::before,
+html body .GenericKeyListModule dt + dd::before,
+html body #Bio dd::before,
+html body .GenericKeyListModule dd::before {
+    content: none !important;
+    background: none !important;
+    display: none !important;
+}
+
+/* Only the Country row */
+html body #Bio dt:nth-of-type(2) + dd::before {
+    content: "" !important;
+    display: inline-block !important;
+    width: 16px !important;
+    height: 11px !important;
+    margin-right: 4px !important;
+    vertical-align: middle !important;
+    background-image: url("https://s.4cdn.org/image/country/hk.gif") !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    background-position: center !important;
+}
+
+/* ===== Breadcrumb: Home / Members maroon, username green ===== */
+html body .BuddyLocation a[href="https://gamebanana.com"],
+html body .BuddyLocation a[href*="gamebanana.com"]:not([href*="/members/"]),
+html body .BuddyLocation a[href*="/members"]:not([href*="/members/1698099"]),
+html body span.BuddyLocation a:nth-child(1),
+html body span.BuddyLocation a:nth-child(2) {
+    color: #800000 !important;
+    text-decoration: none !important;
+}
+
+html body .BuddyLocation a[href*="/members/1698099"],
+html body span.BuddyLocation a:last-child,
+html body .BuddyLocation a[href*="RedlineLucario"] {
+    color: #117743 !important;
+    text-decoration: none !important;
+}
+
+/* ===== Submissions module title MUST be maroon ===== */
+html body #SubmissionsList h2 a,
+html body #SubmissionsList > h2 > a,
+html body module#SubmissionsList h2 a,
+html body .PageModule#SubmissionsList h2 a[href*="/submissions/sublog/"] {
+    color: #800000 !important;
+    text-decoration: none !important;
+    text-shadow: none !important;
+    font-weight: bold !important;
+}
+
+html body #SubmissionsList h2 a:hover {
+    color: #DD0000 !important;
+}
+
+/* ===== "In Development" / statelabels → 4chan menu style ===== */
+html body statelabel,
+html body statelabel[data-label="In Development"],
+html body .Stats Cluster statelabel,
+html body .ContentRating {
+    background: #F0E0D6 !important;
+    color: #800000 !important;
+    border: 1px solid #D9BFB7 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 1px 4px !important;
+    font-size: 12px !important;
+    font-family: Arial, sans-serif !important;
+}
+
+/* Submission name links in the grid → maroon */
+html body .Identifiers Cluster a.Name,
+html body .Identifiers.Cluster a.Name,
+html body a.Name[href*="/wips/"],
+html body a.Name[href*="/mods/"],
+html body .Record a.Name {
+    color: #800000 !important;
+    text-decoration: none !important;
+    text-shadow: none !important;
+}
+
+html body .Identifiers Cluster a.Name:hover,
+html body a.Name[href*="/wips/"]:hover,
+html body a.Name[href*="/mods/"]:hover {
+    color: #DD0000 !important;
+}
+
+/* ===== ContentRating (NSFW / Shown) → plain 4chan text ===== */
+html body statelabel.ContentRating,
+html body .ContentRating {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    font-size: 12px !important;
+    color: #800000 !important;
+}
+
+html body statelabel.ContentRating span,
+html body .ContentRating span {
+    background: transparent !important;
+    color: #800000 !important;
+    border: none !important;
+    padding: 0 !important;
+    font-weight: normal !important;
+}
+
+/* Make it look like (NSFW) */
+html body statelabel.ContentRating::before {
+    content: "(" !important;
+    color: #800000 !important;
+}
+html body statelabel.ContentRating::after {
+    content: ")" !important;
+    color: #800000 !important;
+}
+
+/* Hide the "Shown" part or make it minimal */
+html body statelabel.ContentRating .InitialVisibility_show,
+html body .ContentRating .InitialVisibility_show {
+    display: none !important;
+}
+
+/* ===== NSFW color → #e00 ===== */
+html body statelabel.ContentRating,
+html body .ContentRating,
+html body statelabel.ContentRating span,
+html body .ContentRating span,
+html body statelabel.ContentRating::before,
+html body statelabel.ContentRating::after {
+    color: #e00 !important;
+}
+
+/* ===== Pagination → 4chan style ===== */
+html body .Cluster.PageInfo,
+html body .PageInfo,
+html body .Cluster:has(button) {
+    background: #F0E0D6 !important;
+    border: 1px solid #D9BFB7 !important;
+    padding: 4px 6px !important;
+    font-size: 12px !important;
+    font-family: Arial, sans-serif !important;
+}
+
+html body .Cluster.PageInfo span,
+html body .PageInfo span {
+    color: #800000 !important;
+    background: transparent !important;
+}
+
+html body .Cluster.PageInfo button,
+html body .PageInfo button,
+html body .Cluster button[type="submit"],
+html body form.Cluster button {
+    background: #FFFFFF !important;
+    border: 1px solid #999 !important;
+    color: #800000 !important;
+    border-radius: 0 !important;
+    font-family: Arial, sans-serif !important;
+    font-size: 12px !important;
+    padding: 1px 6px !important;
+    box-shadow: none !important;
+}
+
+html body .Cluster.PageInfo button:hover,
+html body form.Cluster button:hover {
+    background: #EEEEEE !important;
+}
+
+html body .Cluster.PageInfo input[type="number"],
+html body form.Cluster input {
+    background: #FFFFFF !important;
+    border: 1px solid #999 !important;
+    color: #800000 !important;
+    border-radius: 0 !important;
+    width: 40px !important;
+    font-size: 12px !important;
+}
+
+/* ===== NSFW color → #ff0000 ===== */
+html body statelabel.ContentRating,
+html body .ContentRating,
+html body statelabel.ContentRating span,
+html body .ContentRating span,
+html body statelabel.ContentRating::before,
+html body statelabel.ContentRating::after {
+    color: #ff0000 !important;
+}
+
+/* ===== NSFW text color = #e00 ===== */
+html body statelabel.ContentRating,
+html body statelabel.ContentRating::before,
+html body statelabel.ContentRating::after,
+html body .ContentRating,
+html body .ContentRating span {
+    color: #e00 !important;
+}
+
+/* ===== Pagination → 4chan pagelist style ===== */
+html body .Cluster.PageInfo,
+html body .PageInfo,
+html body .Cluster:has(button) {
+    background: #F0E0D6 !important;
+    border: 1px solid #D9BFB7 !important;
+    border-radius: 0 !important;
+    padding: 4px 6px !important;
+    font-size: 12px !important;
+    color: #800000 !important;
+}
+
+html body .PageInfo button,
+html body .Cluster button[type="button"],
+html body .PageInfo form button {
+    background: #F0E0D6 !important;
+    color: #800000 !important;
+    border: 1px solid #D9BFB7 !important;
+    border-radius: 0 !important;
+    font-family: Arial, sans-serif !important;
+    font-size: 12px !important;
+    padding: 1px 6px !important;
+    box-shadow: none !important;
+}
+
+html body .PageInfo button:hover,
+html body .Cluster button:hover {
+    background: #E0D0C6 !important;
+}
+
+html body .PageInfo input[type="number"],
+html body .Cluster input[type="number"] {
+    background: #FFFFFF !important;
+    border: 1px solid #999 !important;
+    color: #000 !important;
+    border-radius: 0 !important;
+    width: 40px !important;
+    font-size: 12px !important;
+    padding: 1px 4px !important;
+}
+
+html body .PageInfo span,
+html body .Cluster span {
+    color: #800000 !important;
+    font-family: Arial, sans-serif !important;
+}
+
+/* ===== Flatter 4chan-style pagination ===== */
+html body .PageInfo,
+html body .Cluster.PageInfo,
+html body .Cluster:has(> button) {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 2px 0 !important;
+    font-size: 13px !important;
+    color: #800000 !important;
+}
+
+html body .PageInfo button,
+html body .Cluster button[type="button"],
+html body .PageInfo form button[type="submit"] {
+    background: #F0E0D6 !important;
+    color: #800000 !important;
+    border: 1px solid #D9BFB7 !important;
+    border-radius: 0 !important;
+    font-family: Arial, Tahoma, sans-serif !important;
+    font-size: 13px !important;
+    padding: 0 8px !important;
+    margin: 0 2px !important;
+    box-shadow: none !important;
+    min-width: 0 !important;
+}
+
+html body .PageInfo button:hover {
+    background: #E8D4C8 !important;
+}
+
+html body .PageInfo input[type="number"] {
+    background: #FFFFFF !important;
+    border: 1px solid #999 !important;
+    border-radius: 0 !important;
+    width: 36px !important;
+    height: 20px !important;
+    font-size: 13px !important;
+    padding: 0 4px !important;
+    margin: 0 2px !important;
+    text-align: center !important;
+}
+
+html body .PageInfo span {
+    color: #800000 !important;
+    font-family: Arial, sans-serif !important;
+    margin: 0 4px !important;
+}
+
+/* Make the page numbers feel more like [1] [2] style if possible */
+html body .PageInfo span::before {
+    content: "[" !important;
+    color: #800000 !important;
+}
+html body .PageInfo span::after {
+    content: "]" !important;
+    color: #800000 !important;
+}
+
+/* ===== Add Comment button → 4chan [Reply] style ===== */
+html body button.IconButton,
+html body button.IconButton:has(span),
+html body .IconButton {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    font-size: 13px !important;
+    font-family: Arial, sans-serif !important;
+    color: #0000EE !important;
+    cursor: pointer !important;
+}
+
+html body button.IconButton span,
+html body .IconButton span {
+    color: #0000EE !important;
+    text-decoration: underline !important;
+    font-size: 13px !important;
+}
+
+html body button.IconButton::before {
+    content: "[" !important;
+    color: #800000 !important;
+    text-decoration: none !important;
+    margin-right: 1px !important;
+}
+
+html body button.IconButton::after {
+    content: "]" !important;
+    color: #800000 !important;
+    text-decoration: none !important;
+    margin-left: 1px !important;
+}
+
+/* Hide the icon */
+html body button.IconButton spriteicon,
+html body .IconButton spriteicon {
+    display: none !important;
+}
+
+html body button.IconButton:hover span {
+    color: #DD0000 !important;
+}
+
+/* ===== Kill leftover border + underline on Add Comment ===== */
+html body button.IconButton,
+html body button.IconButton *,
+html body .IconButton,
+html body .IconButton * {
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    outline: none !important;
+    text-decoration: none !important;
+}
+
+html body button.IconButton span,
+html body .IconButton span {
+    text-decoration: none !important;
+    border: none !important;
+    color: #0000EE !important;
+}
+
+html body button.IconButton::before,
+html body button.IconButton::after {
+    border: none !important;
+    text-decoration: none !important;
+}
+
+/* ===== Force Add Comment fully inline, no container ===== */
+html body button.IconButton,
+html body button[type="button"].IconButton {
+    all: unset !important;
+    display: inline !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    font-size: 13px !important;
+    font-family: Arial, sans-serif !important;
+    color: #0000EE !important;
+    cursor: pointer !important;
+    line-height: normal !important;
+}
+
+html body button.IconButton span {
+    all: unset !important;
+    display: inline !important;
+    color: #0000EE !important;
+    text-decoration: none !important;
+    font-size: 13px !important;
+}
+
+html body button.IconButton::before {
+    content: "[" !important;
+    color: #800000 !important;
+    display: inline !important;
+}
+
+html body button.IconButton::after {
+    content: "]" !important;
+    color: #800000 !important;
+    display: inline !important;
+}
+
+html body button.IconButton spriteicon {
+    display: none !important;
+}
+
+/* ===== Nuclear reset on Add Comment button ===== */
+html body button.IconButton,
+html body button.IconButton *,
+html body button.IconButton::before,
+html body button.IconButton::after {
+    all: unset !important;
+    display: inline !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    border: 0 !important;
+    border-style: none !important;
+    border-width: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    outline: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    font-size: 13px !important;
+    font-family: Arial, sans-serif !important;
+    line-height: 1 !important;
+    color: #0000EE !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+}
+
+html body button.IconButton::before {
+    content: "[" !important;
+    color: #800000 !important;
+}
+
+html body button.IconButton::after {
+    content: "]" !important;
+    color: #800000 !important;
+}
+
+html body button.IconButton spriteicon {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+/* Also kill any parent that might be adding a box */
+html body button.IconButton:parent,
+html body .IconButton {
+    background: transparent !important;
+    border: none !important;
+}
+
+/* ===== Extra: kill box on any parent of the button ===== */
+html body .PageModule button.IconButton,
+html body .Content button.IconButton,
+html body div:has(> button.IconButton) {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+
+/* ===== Specific: Add Comment inside Content Flow ===== */
+html body .Content.Flow > button.IconButton,
+html body .Content.Flow button.IconButton {
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    border-style: none !important;
+    border-width: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    outline: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: inline !important;
+    font-size: 13px !important;
+    font-family: Arial, sans-serif !important;
+    color: #0000EE !important;
+    cursor: pointer !important;
+    line-height: normal !important;
+    width: auto !important;
+    height: auto !important;
+}
+
+html body .Content.Flow > button.IconButton::before {
+    content: "[" !important;
+    color: #800000 !important;
+}
+
+html body .Content.Flow > button.IconButton::after {
+    content: "]" !important;
+    color: #800000 !important;
+}
+
+html body .Content.Flow > button.IconButton span {
+    color: #0000EE !important;
+    text-decoration: none !important;
+    background: transparent !important;
+    border: none !important;
+}
+
+html body .Content.Flow > button.IconButton spriteicon {
+    display: none !important;
+}
+
+/* ===== ICON REPLACEMENTS: FAMFAMFAM + 4chan sticky ===== */
+
+/* Pin icons → 4chan sticky.gif */
+spriteicon[class*="Pin"],
+.PinIcon,
+.PostToolIcon.PinIcon,
+spriteicon.PinIcon {
+    background-image: url("https://s.4cdn.org/image/sticky.gif") !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    width: 16px !important;
+    height: 16px !important;
+    display: inline-block !important;
+    content: "" !important;
+}
+
+/* Core Stats icons */
+spriteicon.SubmissionsIcon,
+.MiscIcon.SubmissionsIcon {
+    background-image: url("https://raw.githubusercontent.com/legacy-icons/famfamfam-silk/master/dist/png/application.png") !important;
+}
+spriteicon.SubscribersIcon,
+.MiscIcon.SubscribersIcon {
+    background-image: url("https://raw.githubusercontent.com/legacy-icons/famfamfam-silk/master/dist/png/group.png") !important;
+}
+spriteicon.PointsIcon,
+.MiscIcon.PointsIcon {
+    background-image: url("https://raw.githubusercontent.com/legacy-icons/famfamfam-silk/master/dist/png/coins.png") !important;
+}
+spriteicon.MedalsIcon,
+.MiscIcon.MedalsIcon {
+    background-image: url("https://raw.githubusercontent.com/legacy-icons/famfamfam-silk/master/dist/png/medal_gold_1.png") !important;
+}
+spriteicon.FeaturingsIcon,
+.MiscIcon.FeaturingsIcon {
+    background-image: url("https://raw.githubusercontent.com/legacy-icons/famfamfam-silk/master/dist/png/star.png") !important;
+}
+spriteicon.ThankedIcon,
+.MiscIcon.ThankedIcon {
+    background-image: url("https://raw.githubusercontent.com/legacy-icons/famfamfam-silk/master/dist/png/heart.png") !important;
+}
+spriteicon.AccountAgeIcon,
+.MiscIcon.AccountAgeIcon,
+spriteicon[class*="Age"] {
+    background-image: url("https://raw.githubusercontent.com/legacy-icons/famfamfam-silk/master/dist/png/clock.png") !important;
+}
+
+/* Like / Subscribe / Post count icons in submissions */
+spriteicon.LikeIcon,
+.MiscIcon.LikeIcon {
+    background-image: url("https://raw.githubusercontent.com/legacy-icons/famfamfam-silk/master/dist/png/heart.png") !important;
+}
+spriteicon.SubscribeIcon,
+.MiscIcon.SubscribeIcon {
+    background-image: url("https://raw.githubusercontent.com/legacy-icons/famfamfam-silk/master/dist/png/group.png") !important;
+}
+spriteicon.Post,
+.SubmissionTypeSmall.Post {
+    background-image: url("https://raw.githubusercontent.com/legacy-icons/famfamfam-silk/master/dist/png/comments.png") !important;
+}
+
+    content: "" !important;
+}
+
+/* ===== SAFE ICON REPLACEMENTS (specific only) ===== */
+
+/* Pin → 4chan sticky */
+spriteicon[class*="PinIcon"],
+.PinIcon {
+    background-image: url("https://s.4cdn.org/image/sticky.gif") !important;
+    width: 16px !important;
+    height: 16px !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+}
+
+/* Core stats only */
+.CoreStats spriteicon,
+.CoreStat spriteicon {
+    width: 16px !important;
+    height: 16px !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+}
+.CoreStats spriteicon.SubmissionsIcon,
+.CoreStat spriteicon.SubmissionsIcon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/application.png") !important;
+}
+.CoreStats spriteicon.SubscribersIcon,
+.CoreStat spriteicon.SubscribersIcon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/group.png") !important;
+}
+.CoreStats spriteicon.PointsIcon,
+.CoreStat spriteicon.PointsIcon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/coins.png") !important;
+}
+.CoreStats spriteicon.MedalsIcon,
+.CoreStat spriteicon.MedalsIcon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/medal_gold_1.png") !important;
+}
+.CoreStats spriteicon.FeaturingsIcon,
+.CoreStat spriteicon.FeaturingsIcon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/star.png") !important;
+}
+.CoreStats spriteicon.ThankedIcon,
+.CoreStat spriteicon.ThankedIcon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/heart.png") !important;
+}
+.CoreStats spriteicon[class*="Age"],
+.CoreStat spriteicon[class*="Age"] {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/clock.png") !important;
+}
+
+/* Submission stats icons */
+.Stats spriteicon.LikeIcon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/heart.png") !important;
+    width: 16px !important;
+    height: 16px !important;
+    background-size: contain !important;
+}
+.Stats spriteicon.SubscribeIcon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/group.png") !important;
+    width: 16px !important;
+    height: 16px !important;
+    background-size: contain !important;
+}
+.Stats spriteicon.Post,
+.Stats .SubmissionTypeSmall.Post {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/comments.png") !important;
+    width: 16px !important;
+    height: 16px !important;
+    background-size: contain !important;
+}
+
+/* ===== Broader Core Stats icon replacements ===== */
+html body #CoreStatsModule spriteicon,
+html body .CoreStats spriteicon,
+html body .Card spriteicon {
+    width: 16px !important;
+    height: 16px !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    display: inline-block !important;
+}
+
+/* Subscribers - try multiple possible class names */
+html body #CoreStatsModule spriteicon[class*="Subscriber"],
+html body #CoreStatsModule spriteicon[class*="Group"],
+html body .Card spriteicon[class*="Subscriber"] {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/group.png") !important;
+}
+
+/* Points - try multiple possible class names */
+html body #CoreStatsModule spriteicon[class*="Point"],
+html body #CoreStatsModule spriteicon[class*="Coin"],
+html body .Card spriteicon[class*="Point"] {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/coins.png") !important;
+}
+
+/* Fallback: if a spriteicon has no background, give it a generic one */
+html body #CoreStatsModule .Card:nth-child(2) spriteicon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/group.png") !important;
+}
+html body #CoreStatsModule .Card:nth-child(3) spriteicon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/coins.png") !important;
+}
+
+/* ===== Explicit Core Stats icon mappings (working CDN) ===== */
+html body #CoreStatsModule .Card:nth-child(1) spriteicon,
+html body #CoreStatsModule spriteicon[class*="Submission"] {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/application.png") !important;
+}
+html body #CoreStatsModule .Card:nth-child(4) spriteicon,
+html body #CoreStatsModule spriteicon[class*="Medal"] {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/medal_gold_1.png") !important;
+}
+html body #CoreStatsModule .Card:nth-child(5) spriteicon,
+html body #CoreStatsModule spriteicon[class*="Featuring"],
+html body #CoreStatsModule spriteicon[class*="Star"] {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/star.png") !important;
+}
+html body #CoreStatsModule .Card:nth-child(6) spriteicon,
+html body #CoreStatsModule spriteicon[class*="Thank"] {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/heart.png") !important;
+}
+html body #CoreStatsModule .Card:nth-child(7) spriteicon,
+html body #CoreStatsModule spriteicon[class*="Age"],
+html body #CoreStatsModule spriteicon[class*="Clock"] {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/clock.png") !important;
+}
+
+/* ===== Navigation tab icons → FAMFAMFAM ===== */
+html body #SubNavigator spriteicon,
+html body .DropdownMenuSubNavigator spriteicon,
+html body nav spriteicon {
+    width: 16px !important;
+    height: 16px !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+/* Map by order / common names */
+html body #SubNavigator li:nth-child(1) spriteicon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/house.png") !important; }
+html body #SubNavigator li:nth-child(2) spriteicon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/application.png") !important; }
+html body #SubNavigator li:nth-child(3) spriteicon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/group.png") !important; }
+html body #SubNavigator li:nth-child(4) spriteicon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/script.png") !important; }
+html body #SubNavigator li:nth-child(5) spriteicon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/text_list_bullets.png") !important; }
+html body #SubNavigator li:nth-child(6) spriteicon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/chart_bar.png") !important; }
+html body #SubNavigator li:nth-child(7) spriteicon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/package.png") !important; }
+html body #SubNavigator li:nth-child(8) spriteicon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/star.png") !important; }
+html body #SubNavigator li:nth-child(9) spriteicon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/comments.png") !important; }
+html body #SubNavigator li:nth-child(10) spriteicon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/cog.png") !important; }
+html body #SubNavigator li:nth-child(11) spriteicon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/user_suit.png") !important; }
+html body #SubNavigator li:nth-child(12) spriteicon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/exclamation.png") !important; }
+
+/* ===== Consistent icon mapping by GameBanana icon type ===== */
+
+/* Leave the banana alone */
+spriteicon.BananaIcon,
+spriteicon[class*="Banana"],
+.SubmissionType.Banana,
+#SubNavigator spriteicon[class*="Banana"] {
+    background-image: none !important;
+    /* keep original */
+}
+
+/* Subscribers icon (used in Core Stats + Network dropdown) → group */
+spriteicon[class*="Subscriber"],
+.MiscIcon.SubscribersIcon,
+spriteicon.SubscribersIcon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/group.png") !important;
+}
+
+/* Submissions icon (computer, NOT banana) → application */
+spriteicon[class*="Submission"]:not([class*="Banana"]),
+.MiscIcon.SubmissionsIcon,
+spriteicon.SubmissionsIcon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/application.png") !important;
+}
+
+/* Points → coins */
+spriteicon[class*="Point"],
+.MiscIcon.PointsIcon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/coins.png") !important;
+}
+
+/* Medals → medal */
+spriteicon[class*="Medal"],
+.MiscIcon.MedalsIcon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/medal_gold_1.png") !important;
+}
+
+/* Star / Featurings / Featured → star */
+spriteicon[class*="Star"],
+spriteicon[class*="Featuring"],
+.MiscIcon.FeaturingsIcon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/star.png") !important;
+}
+
+/* Heart / Thanked → heart */
+spriteicon[class*="Heart"],
+spriteicon[class*="Thank"],
+.MiscIcon.ThankedIcon,
+.MiscIcon.LikeIcon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/heart.png") !important;
+}
+
+/* Clock / Account age → clock */
+spriteicon[class*="Clock"],
+spriteicon[class*="Age"],
+.MiscIcon.AccountAgeIcon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/clock.png") !important;
+}
+
+/* Apps (nav) - different from Submissions */
+#SubNavigator li:nth-child(2) spriteicon,
+spriteicon[class*="App"] {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/application_cascade.png") !important;
+}
+
+/* Network / people icons */
+spriteicon[class*="Network"],
+spriteicon[class*="People"],
+spriteicon[class*="Group"] {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/group.png") !important;
+}
+
+/* Buddies */
+spriteicon[class*="Budd"] {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/group.png") !important;
+}
+
+/* Studios */
+spriteicon[class*="Studio"] {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/building.png") !important;
+}
+
+/* Clubs */
+spriteicon[class*="Club"] {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/house.png") !important;
+}
