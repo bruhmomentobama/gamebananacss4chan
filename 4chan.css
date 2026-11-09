@@ -2517,3 +2517,25 @@ html body .Cluster.PostTools button:has(.PinIcon)[aria-pressed="true"]::before,
 html body .Cluster.PostTools button:has(.PinIcon).Pinned::before {
     content: "[Unpin]" !important;
 }
+
+/* ===== Unpin icon → [Unpin] text ===== */
+html body .Cluster.PostTools button:has(.UnpinIcon)::before,
+html body .PostTools button:has(spriteicon.UnpinIcon)::before {
+    content: "[Unpin]" !important;
+    color: #0000EE !important;
+}
+
+html body .Cluster.PostTools button:has(.UnpinIcon):hover::before {
+    color: #DD0000 !important;
+}
+
+/* Force no boxes on all post tool buttons */
+html body .Cluster.PostTools button,
+html body .Cluster.PostTools a,
+html body .PostTools .IconOnlyButton {
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    outline: none !important;
+    padding: 0 !important;
+}
