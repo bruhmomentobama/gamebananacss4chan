@@ -2438,40 +2438,6 @@ html body .Cluster.PostTools a.ButtonLike {
 html body .PostTools spriteicon {
     display: none !important;
 }
-html body .PostTools button:has(spriteicon.QuoteIcon)::after {
-    content: "[Reply]" !important;
-    color: #0000EE !important;
-    font-size: 12px !important;
-}
-html body .PostTools button:has(spriteicon.StampIcon)::after {
-    content: "[Stamp]" !important;
-    color: #0000EE !important;
-    font-size: 12px !important;
-}
-html body .PostTools button:has(spriteicon.PinIcon)::after {
-    content: "[Pin]" !important;
-    color: #0000EE !important;
-    font-size: 12px !important;
-}
-html body .PostTools button:has(spriteicon.LinkIcon)::after {
-    content: "[Copy Link]" !important;
-    color: #0000EE !important;
-    font-size: 12px !important;
-}
-html body .PostTools a:has(spriteicon.ReportIcon)::after {
-    content: "[Report]" !important;
-    color: #0000EE !important;
-    font-size: 12px !important;
-}
-html body .PostTools button:has(spriteicon.TrashIcon)::after {
-    content: "[Trash]" !important;
-    color: #0000EE !important;
-    font-size: 12px !important;
-}
-html body .PostTools button:hover::after,
-html body .PostTools a:hover::after {
-    color: #DD0000 !important;
-}
 
 html body .PostTools button::after,
 html body .PostTools a::after,
