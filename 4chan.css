@@ -2488,3 +2488,32 @@ html body .Cluster.PostTools button:hover::before,
 html body .Cluster.PostTools a:hover::before {
     color: #DD0000 !important;
 }
+
+/* ===== Post tools - plain text, no boxes ===== */
+html body .Cluster.PostTools button,
+html body .Cluster.PostTools a.ButtonLike,
+html body .PostTools .IconOnlyButton {
+    all: unset !important;
+    cursor: pointer !important;
+    display: inline !important;
+    padding: 0 !important;
+    margin: 0 4px !important;
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+html body .Cluster.PostTools button:hover,
+html body .Cluster.PostTools a:hover,
+html body .PostTools .IconOnlyButton:hover {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* Pin button - show Unpin when active/pressed */
+html body .Cluster.PostTools button:has(.PinIcon).Active::before,
+html body .Cluster.PostTools button:has(.PinIcon)[aria-pressed="true"]::before,
+html body .Cluster.PostTools button:has(.PinIcon).Pinned::before {
+    content: "[Unpin]" !important;
+}
