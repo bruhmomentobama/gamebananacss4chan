@@ -1511,3 +1511,1304 @@ spriteicon[class*="Studio"] {
 spriteicon[class*="Club"] {
     background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/house.png") !important;
 }
+
+/* ===== Stats dropdown - unique icons for unique GameBanana icons ===== */
+/* Overview in Stats dropdown */
+html body #SubNavigator .DropdownMenu li:nth-child(1) spriteicon,
+html body .DropdownMenuSubNavigator li:has(a[href*="overview"]) spriteicon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/house.png") !important;
+}
+
+/* Points */
+html body .DropdownMenuSubNavigator li:has(a[href*="points"]) spriteicon,
+html body li:has(a[href*="/stats/points"]) spriteicon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/coins.png") !important;
+}
+
+/* Medals */
+html body .DropdownMenuSubNavigator li:has(a[href*="medals"]) spriteicon,
+html body li:has(a[href*="/stats/medals"]) spriteicon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/medal_gold_1.png") !important;
+}
+
+/* Medal Progress */
+html body .DropdownMenuSubNavigator li:has(a[href*="progress"]) spriteicon,
+html body li:has(a[href*="medal"]) spriteicon:not([class*="Medal"]) {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/award_star_gold_2.png") !important;
+}
+
+/* ===== Stats dropdown - unique icons (higher specificity) ===== */
+html body .DropdownMenuSubNavigator li a[href*="overview"] + spriteicon,
+html body .DropdownMenuSubNavigator li:has(a[href*="overview"]) > spriteicon,
+html body li:has(> a[href*="/stats/overview"]) spriteicon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/house.png") !important;
+}
+
+html body .DropdownMenuSubNavigator li:has(a[href*="/stats/points"]) spriteicon,
+html body li:has(> a[href*="/members/stats/points"]) spriteicon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/coins.png") !important;
+}
+
+html body .DropdownMenuSubNavigator li:has(a[href*="/stats/medals"]) spriteicon,
+html body li:has(> a[href*="/members/stats/medals"]) spriteicon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/medal_gold_1.png") !important;
+}
+
+html body .DropdownMenuSubNavigator li:has(a[href*="progress"]) spriteicon,
+html body li:has(> a[href*="progress"]) spriteicon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/award_star_gold_2.png") !important;
+}
+
+/* Network dropdown unique icons */
+html body .DropdownMenuSubNavigator li:has(a[href*="buddies"]) spriteicon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/group.png") !important;
+}
+html body .DropdownMenuSubNavigator li:has(a[href*="studios"]) spriteicon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/building.png") !important;
+}
+html body .DropdownMenuSubNavigator li:has(a[href*="clubs"]) spriteicon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/house.png") !important;
+}
+html body .DropdownMenuSubNavigator li:has(a[href*="subscribers"]) spriteicon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/group.png") !important;
+}
+html body .DropdownMenuSubNavigator li:has(a[href*="subscriptions"]) spriteicon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/user_go.png") !important;
+}
+
+/* ===== Exact Stats dropdown classes from HTML ===== */
+html body spriteicon.StatsTabIcon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/chart_bar.png") !important;
+}
+html body spriteicon.PointsIcon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/coins.png") !important;
+}
+html body spriteicon.MedalsTabIcon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/medal_gold_1.png") !important;
+}
+
+/* Medal Progress shares MedalsTabIcon, so give it a slight variation by context */
+html body li:has(a[href*="medalprogress"]) spriteicon.MedalsTabIcon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/award_star_gold_2.png") !important;
+}
+
+/* ===== FORCE Stats dropdown icons - maximum specificity ===== */
+html body li.TitleOnly ul li a spriteicon.StatsTabIcon,
+html body .DropdownMenuSubNavigator li a spriteicon.StatsTabIcon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/house.png") !important;
+    background-position: center !important;
+    background-size: contain !important;
+    width: 16px !important;
+    height: 16px !important;
+}
+
+html body li.TitleOnly ul li a spriteicon.PointsIcon,
+html body .DropdownMenuSubNavigator li a spriteicon.PointsIcon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/coins.png") !important;
+    background-position: center !important;
+    background-size: contain !important;
+    width: 16px !important;
+    height: 16px !important;
+}
+
+html body li.TitleOnly ul li a spriteicon.MedalsTabIcon,
+html body .DropdownMenuSubNavigator li a spriteicon.MedalsTabIcon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/medal_gold_1.png") !important;
+    background-position: center !important;
+    background-size: contain !important;
+    width: 16px !important;
+    height: 16px !important;
+}
+
+html body li.TitleOnly ul li a[href*="medalprogress"] spriteicon,
+html body .DropdownMenuSubNavigator li a[href*="medalprogress"] spriteicon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/award_star_gold_2.png") !important;
+    background-position: center !important;
+    background-size: contain !important;
+    width: 16px !important;
+    height: 16px !important;
+}
+
+/* ===== Clear sprite sheet on dropdown icons ===== */
+html body .DropdownMenuSubNavigator spriteicon,
+html body li.TitleOnly ul spriteicon {
+    background-position: center center !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+}
+
+/* ===== EXACT SubNavigator icon mapping from full HTML ===== */
+
+/* Top-level tabs */
+html body #SubNavigator spriteicon.ProfileIcon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/house.png") !important; }
+html body #SubNavigator spriteicon.App { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/application_cascade.png") !important; }
+html body #SubNavigator spriteicon.NetworkTabIcon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/group.png") !important; }
+html body #SubNavigator spriteicon.PointsIcon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/coins.png") !important; }
+html body #SubNavigator spriteicon.ListsIcon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/text_list_bullets.png") !important; }
+html body #SubNavigator spriteicon.StatsTabIcon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/chart_bar.png") !important; }
+html body #SubNavigator spriteicon.SectionsTabIcon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/package.png") !important; }
+html body #SubNavigator spriteicon.FeaturedIcon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/star.png") !important; }
+html body #SubNavigator spriteicon.Thread { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/comments.png") !important; }
+html body #SubNavigator spriteicon.CcIcon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/cog.png") !important; }
+html body #SubNavigator spriteicon.AdminIcon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/user_suit.png") !important; }
+html body #SubNavigator spriteicon.ReportIcon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/exclamation.png") !important; }
+
+/* Network dropdown */
+html body #SubNavigator spriteicon.BuddiesIcon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/group.png") !important; }
+html body #SubNavigator spriteicon.Studio { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/building.png") !important; }
+html body #SubNavigator spriteicon.Club { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/house.png") !important; }
+html body #SubNavigator spriteicon.SubscribersIcon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/group.png") !important; }
+html body #SubNavigator spriteicon.SubscriptionsIcon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/user_go.png") !important; }
+
+/* Logs dropdown */
+html body #SubNavigator spriteicon.StampIcon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/tick.png") !important; }
+
+/* Lists dropdown */
+html body #SubNavigator spriteicon.LikeIcon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/heart.png") !important; }
+html body #SubNavigator spriteicon.ThanksIcon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/heart_add.png") !important; }
+html body #SubNavigator spriteicon.Poll { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/chart_pie.png") !important; }
+html body #SubNavigator spriteicon.Idea { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/lightbulb.png") !important; }
+html body #SubNavigator spriteicon.BoostBountyIcon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/money.png") !important; }
+html body #SubNavigator spriteicon.Contest { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/trophy.png") !important; }
+html body #SubNavigator spriteicon.Question { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/help.png") !important; }
+
+/* Stats dropdown */
+html body #SubNavigator li a[href*="medalprogress"] spriteicon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/award_star_gold_2.png") !important; }
+html body #SubNavigator spriteicon.MedalsTabIcon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/medal_gold_1.png") !important; }
+
+/* Submissions dropdown */
+html body #SubNavigator spriteicon.SublogIcon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/script.png") !important; }
+html body #SubNavigator spriteicon.PortfolioIcon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/folder.png") !important; }
+html body #SubNavigator spriteicon.ContributionsIcon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/user_add.png") !important; }
+html body #SubNavigator spriteicon.Mod { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/plugin.png") !important; }
+html body #SubNavigator spriteicon.Request { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/email.png") !important; }
+html body #SubNavigator spriteicon.Sound { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/sound.png") !important; }
+html body #SubNavigator spriteicon.Support { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/help.png") !important; }
+html body #SubNavigator spriteicon.Todo { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/note.png") !important; }
+html body #SubNavigator spriteicon.Update { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/arrow_refresh.png") !important; }
+html body #SubNavigator spriteicon.Wip { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/wrench.png") !important; }
+html body #SubNavigator spriteicon.Post { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/comments.png") !important; }
+html body #SubNavigator spriteicon.BitpitFile { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/page.png") !important; }
+
+/* Admin dropdown */
+html body #SubNavigator spriteicon.HistoryIcon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/clock.png") !important; }
+
+/* Force size and position on all SubNavigator icons */
+html body #SubNavigator spriteicon {
+    width: 16px !important;
+    height: 16px !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+/* ===== FORCE Stats dropdown uniqueness - final override ===== */
+html body #SubNavigator li.TitleOnly ul li a[href*="/stats/overview/"] spriteicon,
+html body #SubNavigator li a[href*="stats/overview"] spriteicon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/house.png") !important;
+}
+
+html body #SubNavigator li.TitleOnly ul li a[href*="/stats/points/"] spriteicon,
+html body #SubNavigator li a[href*="stats/points"] spriteicon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/coins.png") !important;
+}
+
+html body #SubNavigator li.TitleOnly ul li a[href*="/stats/medals/"] spriteicon,
+html body #SubNavigator li a[href*="stats/medals"] spriteicon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/medal_gold_1.png") !important;
+}
+
+html body #SubNavigator li.TitleOnly ul li a[href*="medalprogress"] spriteicon,
+html body #SubNavigator li a[href*="medalprogress"] spriteicon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/award_star_gold_2.png") !important;
+}
+
+/* ===== Match original GameBanana icon reuse ===== */
+/* Overview uses same icon as Stats tab → chart_bar */
+html body #SubNavigator li a[href*="stats/overview"] spriteicon,
+html body #SubNavigator spriteicon.StatsTabIcon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/chart_bar.png") !important;
+}
+
+/* Medal Progress uses same icon as Medals → medal_gold_1 */
+html body #SubNavigator li a[href*="medalprogress"] spriteicon,
+html body #SubNavigator spriteicon.MedalsTabIcon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/medal_gold_1.png") !important;
+}
+
+/* Points stays unique */
+html body #SubNavigator spriteicon.PointsIcon,
+html body #SubNavigator li a[href*="stats/points"] spriteicon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/coins.png") !important;
+}
+
+/* ===== LAST RESORT - Stats dropdown by full path ===== */
+html body wrapper#SubNavigator ul.DropdownMenuSubNavigator li.TitleOnly ul li a[href*="overview"] spriteicon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/chart_bar.png") !important;
+}
+html body wrapper#SubNavigator ul.DropdownMenuSubNavigator li.TitleOnly ul li a[href*="points"] spriteicon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/coins.png") !important;
+}
+html body wrapper#SubNavigator ul.DropdownMenuSubNavigator li.TitleOnly ul li a[href*="medals"] spriteicon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/medal_gold_1.png") !important;
+}
+html body wrapper#SubNavigator ul.DropdownMenuSubNavigator li.TitleOnly ul li a[href*="medalprogress"] spriteicon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/medal_gold_1.png") !important;
+}
+
+/* ===== Network dropdown ===== */
+html body #SubNavigator li a[href*="network/buddies"] spriteicon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/group.png") !important; }
+html body #SubNavigator li a[href*="network/studios"] spriteicon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/building.png") !important; }
+html body #SubNavigator li a[href*="network/clubs"] spriteicon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/house.png") !important; }
+html body #SubNavigator li a[href*="network/subscribers"] spriteicon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/group.png") !important; }
+html body #SubNavigator li a[href*="network/subscriptions"] spriteicon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/user_go.png") !important; }
+
+/* ===== Logs dropdown ===== */
+html body #SubNavigator li a[href*="logs/pointslog"] spriteicon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/coins.png") !important; }
+html body #SubNavigator li a[href*="logs/stampslog"] spriteicon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/tick.png") !important; }
+
+/* ===== Lists dropdown ===== */
+html body #SubNavigator li a[href*="lists/likes"] spriteicon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/heart.png") !important; }
+html body #SubNavigator li a[href*="lists/thankedsubs"] spriteicon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/heart_add.png") !important; }
+html body #SubNavigator li a[href*="lists/votedpolls"] spriteicon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/chart_pie.png") !important; }
+html body #SubNavigator li a[href*="lists/ratedideas"] spriteicon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/lightbulb.png") !important; }
+html body #SubNavigator li a[href*="lists/contributedbounties"] spriteicon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/money.png") !important; }
+html body #SubNavigator li a[href*="lists/awardedbounties"] spriteicon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/coins.png") !important; }
+html body #SubNavigator li a[href*="lists/participatedcontests"] spriteicon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/trophy.png") !important; }
+html body #SubNavigator li a[href*="lists/solvedquestions"] spriteicon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/help.png") !important; }
+
+/* ===== Submissions dropdown ===== */
+html body #SubNavigator li a[href*="submissions/sublog"] spriteicon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/script.png") !important; }
+html body #SubNavigator li a[href*="submissions/contributions"] spriteicon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/user_add.png") !important; }
+html body #SubNavigator li a[href*="submissions/collections"] spriteicon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/folder.png") !important; }
+html body #SubNavigator li a[href*="submissions/requests"] spriteicon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/email.png") !important; }
+html body #SubNavigator li a[href*="submissions/sprays"] spriteicon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/paintbrush.png") !important; }
+html body #SubNavigator li a[href*="submissions/posts"] spriteicon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/comments.png") !important; }
+
+/* ===== Admin dropdown ===== */
+html body #SubNavigator li a[href*="admin/tickets"] spriteicon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/help.png") !important; }
+
+/* ===== Submissions dropdown - corrected ===== */
+html body #SubNavigator li a[href*="submissions/sublog"] spriteicon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/script.png") !important; }
+html body #SubNavigator li a[href*="submissions/portfolio"] spriteicon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/folder.png") !important; }
+html body #SubNavigator li a[href*="submissions/contributions"] spriteicon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/user_add.png") !important; }
+html body #SubNavigator li a[href*="submissions/mods"] spriteicon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/plugin.png") !important; }
+html body #SubNavigator li a[href*="submissions/requests"] spriteicon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/email.png") !important; }
+html body #SubNavigator li a[href*="submissions/sounds"] spriteicon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/sound.png") !important; }
+html body #SubNavigator li a[href*="submissions/support"] spriteicon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/help.png") !important; }
+html body #SubNavigator li a[href*="submissions/todos"] spriteicon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/note.png") !important; }
+html body #SubNavigator li a[href*="submissions/updates"] spriteicon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/arrow_refresh.png") !important; }
+html body #SubNavigator li a[href*="submissions/wips"] spriteicon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/wrench.png") !important; }
+html body #SubNavigator li a[href*="submissions/posts"] spriteicon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/comments.png") !important; }
+html body #SubNavigator li a[href*="submissions/bitpit"] spriteicon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/page.png") !important; }
+
+/* ===== Stamps → tag (closest to stamp), Portfolio → page ===== */
+html body #SubNavigator li a[href*="logs/stampslog"] spriteicon,
+html body #SubNavigator spriteicon.StampIcon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/tag.png") !important;
+}
+
+html body #SubNavigator li a[href*="submissions/portfolio"] spriteicon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/page.png") !important;
+}
+
+html body #SubNavigator li a[href*="submissions/bitpit"] spriteicon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/database.png") !important;
+}
+
+/* ===== Contain icon replacements - don't break PrimaryNav ===== */
+html body #PrimaryNav spriteicon,
+html body #SiteMenu spriteicon,
+html body #GamesPane spriteicon,
+html body .NavGames spriteicon {
+    background-image: none !important;
+    width: auto !important;
+    height: auto !important;
+    background-size: auto !important;
+    background-position: initial !important;
+}
+
+/* ===== Protect top nav module icons ===== */
+html body spriteicon.NavModuleIcon,
+html body .NavModuleIcon,
+html body #NotificationsNavModule spriteicon,
+html body #BuddiesNavModule spriteicon,
+html body #SubmissionsNavModule spriteicon,
+html body #ActivityNavModule spriteicon,
+html body #RemindersNavModule spriteicon,
+html body #MedalsNavModule spriteicon,
+html body #MessagesNavModule spriteicon,
+html body #StatsNavModule spriteicon,
+html body #InstallersNavModule spriteicon,
+html body #NavOptionsNavModule spriteicon,
+html body #SettingsNavModule spriteicon,
+html body .NotificationIcon {
+    background-image: none !important;
+    width: auto !important;
+    height: auto !important;
+    background-size: auto !important;
+    background-position: initial !important;
+}
+
+/* ===== SecondaryNav module icons → FAMFAMFAM ===== */
+html body #SecondaryNav spriteicon.NotificationsNavModuleIcon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/bell.png") !important; }
+html body #SecondaryNav spriteicon.BuddiesNavModuleIcon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/group.png") !important; }
+html body #SecondaryNav spriteicon.SubmissionsNavModuleIcon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/package.png") !important; }
+html body #SecondaryNav spriteicon.ActivityNavModuleIcon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/lightning.png") !important; }
+html body #SecondaryNav spriteicon.RemindersNavModuleIcon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/clock.png") !important; }
+html body #SecondaryNav spriteicon.MedalsNavModuleIcon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/medal_gold_1.png") !important; }
+html body #SecondaryNav spriteicon.MessagesNavModuleIcon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/email.png") !important; }
+html body #SecondaryNav spriteicon.StatsNavModuleIcon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/chart_bar.png") !important; }
+html body #SecondaryNav spriteicon.InstallersNavModuleIcon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/computer.png") !important; }
+html body #SecondaryNav spriteicon.NavOptionsNavModuleIcon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/cog.png") !important; }
+html body #SecondaryNav spriteicon.SettingsNavModuleIcon { background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/wrench.png") !important; }
+
+/* Force size on SecondaryNav icons */
+html body #SecondaryNav spriteicon.NavModuleIcon {
+    width: 16px !important;
+    height: 16px !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+/* ===== Restore PrimaryNav icons that got wiped ===== */
+html body #PrimaryNav spriteicon,
+html body #SearchForm spriteicon,
+html body #SiteMenuToggle spriteicon,
+html body .SystemUpdate spriteicon,
+html body #PrimaryNav .NavModuleIcon {
+    background-image: none !important;
+    width: auto !important;
+    height: auto !important;
+    background-size: auto !important;
+    background-position: initial !important;
+    background-repeat: no-repeat !important;
+}
+
+/* Specifically restore search and menu icons */
+html body #SearchForm button spriteicon,
+html body #SiteMenuToggle spriteicon,
+html body .MenuIcon,
+html body spriteicon[class*="Search"],
+html body spriteicon[class*="Menu"] {
+    background-image: none !important;
+    width: 16px !important;
+    height: 16px !important;
+}
+
+/* ===== Specific broken PrimaryNav icons ===== */
+html body spriteicon.SearchIcon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/magnifier.png") !important;
+    width: 16px !important;
+    height: 16px !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+html body spriteicon.UpdatesIcon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/arrow_refresh.png") !important;
+    width: 16px !important;
+    height: 16px !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+html body spriteicon.SectionsNavModuleIcon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/text_list_bullets.png") !important;
+    width: 16px !important;
+    height: 16px !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+/* ===== FORCE search, updates, menu - absolute last ===== */
+html body form#SearchForm button spriteicon.SearchIcon,
+html body #SearchForm spriteicon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/magnifier.png") !important;
+    width: 16px !important;
+    height: 16px !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+html body a.SystemUpdate spriteicon.UpdatesIcon,
+html body .SystemUpdate spriteicon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/arrow_refresh.png") !important;
+    width: 16px !important;
+    height: 16px !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+html body button#SiteMenuToggle spriteicon.SectionsNavModuleIcon,
+html body #SiteMenuToggle spriteicon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/text_list_bullets.png") !important;
+    width: 16px !important;
+    height: 16px !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+/* ===== SecondaryNav icon spacing ===== */
+html body #SecondaryNav module,
+html body #SecondaryNav > wrapper > module {
+    margin: 4px 0 !important;
+    padding: 4px !important;
+}
+
+html body #SecondaryNav icon,
+html body #SecondaryNav a.Icon {
+    padding: 6px !important;
+    display: block !important;
+}
+
+/* ===== SecondaryNav - remove spacing, add 4chan border ===== */
+html body #SecondaryNav module,
+html body #SecondaryNav > wrapper > module {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+html body #SecondaryNav icon,
+html body #SecondaryNav a.Icon {
+    padding: 2px !important;
+    border: 1px solid #D9BFB7 !important;
+    background: #F0E0D6 !important;
+    margin: 1px !important;
+}
+
+/* ===== Single border around entire SecondaryNav ===== */
+html body #SecondaryNav {
+    border: 1px solid #D9BFB7 !important;
+    background: #F0E0D6 !important;
+    padding: 4px !important;
+}
+
+/* Remove individual icon borders */
+html body #SecondaryNav icon,
+html body #SecondaryNav a.Icon {
+    border: none !important;
+    background: transparent !important;
+    margin: 0 !important;
+    padding: 2px !important;
+}
+
+/* ===== SecondaryNav wrap nicely ===== */
+html body #SecondaryNav > wrapper {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: flex-start !important;
+    gap: 2px !important;
+    max-width: 100% !important;
+}
+
+html body #SecondaryNav module {
+    flex: 0 0 auto !important;
+}
+
+/* ===== Tight wrap for SecondaryNav ===== */
+html body #SecondaryNav {
+    width: auto !important;
+    max-width: 180px !important;
+}
+
+html body #SecondaryNav > wrapper {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: flex-start !important;
+    gap: 2px !important;
+    width: 100% !important;
+}
+
+html body #SecondaryNav module,
+html body #SecondaryNav icon,
+html body #SecondaryNav a.Icon {
+    width: 28px !important;
+    height: 28px !important;
+    flex: 0 0 28px !important;
+}
+
+/* ===== SecondaryNav - single line, tight border ===== */
+html body #SecondaryNav {
+    width: auto !important;
+    max-width: none !important;
+    display: inline-block !important;
+    border: 1px solid #D9BFB7 !important;
+    background: #F0E0D6 !important;
+    padding: 2px !important;
+}
+
+html body #SecondaryNav > wrapper {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    gap: 2px !important;
+}
+
+html body #SecondaryNav module,
+html body #SecondaryNav icon,
+html body #SecondaryNav a.Icon {
+    width: auto !important;
+    height: auto !important;
+    flex: 0 0 auto !important;
+}
+
+/* ===== SecondaryNav - larger icons, more spacing ===== */
+html body #SecondaryNav {
+    padding: 6px !important;
+}
+
+html body #SecondaryNav > wrapper {
+    gap: 8px !important;
+}
+
+html body #SecondaryNav spriteicon.NavModuleIcon,
+html body #SecondaryNav icon,
+html body #SecondaryNav a.Icon {
+    width: 24px !important;
+    height: 24px !important;
+    background-size: contain !important;
+}
+
+html body #SecondaryNav module {
+    padding: 4px !important;
+}
+
+/* ===== Profile pic in SecondaryNav matches other icons ===== */
+html body #SecondaryNav #PersonalNavModule img,
+html body #SecondaryNav icon img {
+    width: 24px !important;
+    height: 24px !important;
+    object-fit: cover !important;
+}
+
+/* ===== Hide SecondaryNav scrollbar ===== */
+html body #SecondaryNav,
+html body #SecondaryNav > wrapper {
+    overflow: hidden !important;
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+}
+
+html body #SecondaryNav::-webkit-scrollbar,
+html body #SecondaryNav > wrapper::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+/* ===== Submission card stats icons ===== */
+html body .Record spriteicon.LikeIcon,
+html body .Stats spriteicon.LikeIcon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/heart.png") !important;
+    width: 16px !important;
+    height: 16px !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+}
+
+html body .Record spriteicon.SubscribeIcon,
+html body .Stats spriteicon.SubscribeIcon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/group.png") !important;
+    width: 16px !important;
+    height: 16px !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+}
+
+html body .Record spriteicon.Post,
+html body .Stats spriteicon.Post,
+html body .Record .SubmissionTypeSmall.Post {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/comments.png") !important;
+    width: 16px !important;
+    height: 16px !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+}
+
+html body .Record spriteicon.SubmitIcon,
+html body .TimeStamp spriteicon.SubmitIcon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/clock.png") !important;
+    width: 16px !important;
+    height: 16px !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+}
+
+html body .Record spriteicon.UpdatesIcon,
+html body .TimeStamp spriteicon.UpdatesIcon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/arrow_refresh.png") !important;
+    width: 16px !important;
+    height: 16px !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+}
+
+/* ===== FORCE submission card icons ===== */
+html body .ModRecord spriteicon.LikeIcon,
+html body .WipRecord spriteicon.LikeIcon,
+html body .Record .Stats spriteicon.LikeIcon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/heart.png") !important;
+    width: 16px !important;
+    height: 16px !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+html body .ModRecord spriteicon.SubscribeIcon,
+html body .WipRecord spriteicon.SubscribeIcon,
+html body .Record .Stats spriteicon.SubscribeIcon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/group.png") !important;
+    width: 16px !important;
+    height: 16px !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+html body .ModRecord spriteicon.Post,
+html body .WipRecord spriteicon.Post,
+html body .Record .Stats .SubmissionTypeSmall.Post {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/comments.png") !important;
+    width: 16px !important;
+    height: 16px !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+html body .ModRecord spriteicon.SubmitIcon,
+html body .WipRecord spriteicon.SubmitIcon,
+html body .Record .TimeStamp spriteicon.SubmitIcon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/clock.png") !important;
+    width: 16px !important;
+    height: 16px !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+html body .ModRecord spriteicon.UpdatesIcon,
+html body .WipRecord spriteicon.UpdatesIcon,
+html body .Record .TimeStamp spriteicon.UpdatesIcon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/arrow_refresh.png") !important;
+    width: 16px !important;
+    height: 16px !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+/* ===== Completion / progress icon ===== */
+html body .Record spriteicon[class*="Completion"],
+html body .Record spriteicon[class*="Progress"],
+html body .Stats spriteicon[class*="Completion"],
+html body statelabel[class*="Completion"] spriteicon,
+html body .Record .Stats span:has(+ span:contains("%")) spriteicon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/chart_bar.png") !important;
+    width: 16px !important;
+    height: 16px !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+}
+
+/* Target the completion percentage area more broadly */
+html body .Record .Stats:has(span:contains("%")) spriteicon:first-of-type,
+html body .ModRecord .Stats span spriteicon:only-of-type {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/chart_curve.png") !important;
+    width: 16px !important;
+    height: 16px !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+}
+
+/* ===== Completion percentage icon ===== */
+html body spriteicon.StatusUpdate,
+html body .SubmissionTypeSmall.StatusUpdate,
+html body .Record spriteicon.StatusUpdate {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/chart_bar.png") !important;
+    width: 16px !important;
+    height: 16px !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+/* ===== Remove border from StatusUpdate icon ===== */
+html body spriteicon.StatusUpdate,
+html body .SubmissionTypeSmall.StatusUpdate {
+    border: none !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+    outline: none !important;
+}
+
+/* ===== Post tool icons (except pin) ===== */
+html body .PostTools spriteicon.QuoteIcon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/comment.png") !important;
+    width: 16px !important;
+    height: 16px !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+}
+
+html body .PostTools spriteicon.StampIcon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/tick.png") !important;
+    width: 16px !important;
+    height: 16px !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+}
+
+html body .PostTools spriteicon.LinkIcon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/link.png") !important;
+    width: 16px !important;
+    height: 16px !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+}
+
+html body .PostTools spriteicon.ReportIcon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/exclamation.png") !important;
+    width: 16px !important;
+    height: 16px !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+}
+
+html body .PostTools spriteicon.TrashIcon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/bin.png") !important;
+    width: 16px !important;
+    height: 16px !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+}
+
+/* ===== FORCE post tool icons ===== */
+html body .Cluster.PostTools button spriteicon.QuoteIcon,
+html body .PostTools .IconOnlyButton spriteicon.QuoteIcon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/comment.png") !important;
+    width: 16px !important;
+    height: 16px !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+html body .Cluster.PostTools button spriteicon.StampIcon,
+html body .PostTools .IconOnlyButton spriteicon.StampIcon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/tick.png") !important;
+    width: 16px !important;
+    height: 16px !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+html body .Cluster.PostTools button spriteicon.LinkIcon,
+html body .PostTools .IconOnlyButton spriteicon.LinkIcon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/link.png") !important;
+    width: 16px !important;
+    height: 16px !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+html body .Cluster.PostTools a spriteicon.ReportIcon,
+html body .PostTools .IconOnlyButton spriteicon.ReportIcon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/exclamation.png") !important;
+    width: 16px !important;
+    height: 16px !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+html body .Cluster.PostTools button spriteicon.TrashIcon,
+html body .PostTools .IconOnlyButton spriteicon.TrashIcon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/bin.png") !important;
+    width: 16px !important;
+    height: 16px !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+/* ===== Stamp icon - match Logs stamps (tag.png) ===== */
+html body .PostTools spriteicon.StampIcon,
+html body .Cluster.PostTools button spriteicon.StampIcon,
+html body .PostTools .IconOnlyButton spriteicon.StampIcon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/tag.png") !important;
+    width: 16px !important;
+    height: 16px !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+/* ===== Leave StampIcon alone - restore original ===== */
+html body spriteicon.StampIcon,
+html body .PostToolIcon.StampIcon,
+html body .PostTools spriteicon.StampIcon,
+html body #SubNavigator spriteicon.StampIcon,
+html body li a[href*="stampslog"] spriteicon {
+    background-image: none !important;
+    width: auto !important;
+    height: auto !important;
+    background-size: auto !important;
+    background-position: initial !important;
+}
+
+/* ===== StampIcon - fully unset so original shows ===== */
+html body spriteicon.StampIcon,
+html body .PostToolIcon.StampIcon,
+html body .PostTools spriteicon.StampIcon,
+html body #SubNavigator spriteicon.StampIcon,
+html body li a[href*="stampslog"] spriteicon.StampIcon {
+    background-image: unset !important;
+    background: unset !important;
+    width: unset !important;
+    height: unset !important;
+    background-size: unset !important;
+    background-position: unset !important;
+}
+
+/* ===== StampIcon → FAMFAMFAM tag (stamp-like) ===== */
+html body spriteicon.StampIcon,
+html body .PostToolIcon.StampIcon,
+html body .PostTools spriteicon.StampIcon,
+html body #SubNavigator spriteicon.StampIcon,
+html body li a[href*="stampslog"] spriteicon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/tag.png") !important;
+    width: 16px !important;
+    height: 16px !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+/* ===== StampIcon → accept (stamp-like approval) ===== */
+html body spriteicon.StampIcon,
+html body .PostToolIcon.StampIcon,
+html body .PostTools spriteicon.StampIcon,
+html body #SubNavigator spriteicon.StampIcon,
+html body li a[href*="stampslog"] spriteicon {
+    background-image: url("https://cdn.jsdelivr.net/npm/famfamfam-silk@1.0.0/dist/png/accept.png") !important;
+    width: 16px !important;
+    height: 16px !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+/* ===== StampIcon - restore original sprite sheet ===== */
+html body spriteicon.StampIcon,
+html body .PostToolIcon.StampIcon,
+html body .PostTools spriteicon.StampIcon,
+html body #SubNavigator spriteicon.StampIcon,
+html body li a[href*="stampslog"] spriteicon {
+    background-image: url("https://images.gamebanana.com/static/img/icon_sheet.png?6aee92432cadc") !important;
+    width: 16px !important;
+    height: 16px !important;
+    background-size: auto !important;
+    background-repeat: no-repeat !important;
+    background-position: initial !important;
+}
+
+/* ===== StampIcon - exact original position ===== */
+html body spriteicon.StampIcon,
+html body .PostToolIcon.StampIcon,
+html body .PostTools spriteicon.StampIcon,
+html body #SubNavigator spriteicon.StampIcon,
+html body li a[href*="stampslog"] spriteicon {
+    background-image: url("https://images.gamebanana.com/static/img/icon_sheet.png?6aee92432cadc") !important;
+    background-position: -464px -48px !important;
+    width: 16px !important;
+    height: 16px !important;
+    background-size: auto !important;
+    background-repeat: no-repeat !important;
+}
+
+/* ===== Dark panels → 4chan beige ===== */
+html body .AvatarTooltip,
+html body #IdentityModule,
+html body .IdentityCard,
+html body [class*="Tooltip"],
+html body #SecondaryNav pane,
+html body #SecondaryNav .pane,
+html body #SubmissionsNavModule pane,
+html body #SubmissionsNavModule .pane,
+html body #NotificationsNavModule pane,
+html body #MessagesNavModule pane,
+html body #SettingsNavModule pane,
+html body #BuddiesNavModule pane,
+html body #StatsNavModule pane,
+html body #MedalsNavModule pane,
+html body #RemindersNavModule pane,
+html body #InstallersNavModule pane,
+html body #ActivityNavModule pane {
+    background: #F0E0D6 !important;
+    background-color: #F0E0D6 !important;
+    color: #800000 !important;
+    border: 1px solid #D9BFB7 !important;
+}
+
+/* Dark dropdowns and menus */
+html body .DropdownMenu,
+html body .sf-menu ul,
+html body .DropdownMenuSubNavigator ul,
+html body ul.sf-menu ul {
+    background: #F0E0D6 !important;
+    background-color: #F0E0D6 !important;
+    border: 1px solid #D9BFB7 !important;
+}
+
+/* Any remaining dark backgrounds */
+html body [style*="background: black"],
+html body [style*="background-color: black"],
+html body [style*="background:#000"],
+html body [style*="background-color:#000"] {
+    background: #F0E0D6 !important;
+    background-color: #F0E0D6 !important;
+}
+
+/* ===== Breadcrumb - 4chan style ===== */
+html body #Breadcrumb,
+html body nav#Breadcrumb {
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 4px 0 !important;
+    box-shadow: none !important;
+}
+
+html body #Breadcrumb a {
+    color: #0000EE !important;
+    text-decoration: none !important;
+    font-weight: normal !important;
+}
+
+html body #Breadcrumb a:hover {
+    color: #DD0000 !important;
+}
+
+html body #Breadcrumb a:last-of-type {
+    color: #117743 !important;
+    font-weight: bold !important;
+}
+
+html body #Breadcrumb spriteicon,
+html body #Breadcrumb .RightArrowIcon {
+    background-image: none !important;
+    width: auto !important;
+    height: auto !important;
+}
+
+html body #Breadcrumb spriteicon::before,
+html body #Breadcrumb .RightArrowIcon::before {
+    content: " > " !important;
+    color: #800000 !important;
+    font-size: 12px !important;
+    background: none !important;
+}
+
+/* ===== Thinner border on identity card ===== */
+html body #IdentityModule,
+html body .IdentityCard,
+html body #IdentityModule .Content,
+html body module#IdentityModule {
+    border: 1px solid #D9BFB7 !important;
+    border-width: 1px !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* ===== Force thin border on identity area ===== */
+html body #IdentityModule,
+html body #IdentityModule *,
+html body module#IdentityModule,
+html body .IdentityWrapper,
+html body .ProfileIdentity {
+    border-width: 1px !important;
+    border-style: solid !important;
+    border-color: #D9BFB7 !important;
+    box-shadow: none !important;
+    outline: none !important;
+    outline-width: 0 !important;
+}
+
+/* Remove any double borders */
+html body #IdentityModule > div,
+html body #IdentityModule .Content {
+    border: none !important;
+}
+
+/* ===== Fix - only outer border, no inner borders ===== */
+html body #IdentityModule,
+html body module#IdentityModule {
+    border: 1px solid #D9BFB7 !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+html body #IdentityModule *,
+html body #IdentityModule .Content,
+html body #IdentityModule .Content *,
+html body #IdentityModule div,
+html body #IdentityModule ul,
+html body #IdentityModule li,
+html body #IdentityModule span,
+html body #IdentityModule small,
+html body #IdentityModule a,
+html body #IdentityModule itemcount {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* ===== Absolute force 1px border on IdentityModule only ===== */
+html body module#IdentityModule.PageModule,
+html body #IdentityModule.StrangeBerryModule {
+    border: 1px solid #D9BFB7 !important;
+    border-width: 1px !important;
+    padding: 8px !important;
+    box-shadow: none !important;
+    outline: 0 !important;
+}
+
+/* Kill any border on parents */
+html body .PageModule:has(#IdentityModule),
+html body div:has(> #IdentityModule) {
+    border: none !important;
+    padding: 0 !important;
+}
+
+/* ===== Site Menu dropdown → beige ===== */
+html body #SiteMenu,
+html body nav#SiteMenu,
+html body .tippy-box[data-theme*="siteMenu"],
+html body .tippy-box[data-theme*="dropdown"],
+html body #tippy-7,
+html body [data-theme="dropdown siteMenu"],
+html body .tippy-content {
+    background: #F0E0D6 !important;
+    background-color: #F0E0D6 !important;
+    color: #800000 !important;
+    border: 1px solid #D9BFB7 !important;
+}
+
+html body #SiteMenu a,
+html body #SiteMenu strong,
+html body #SiteMenu span,
+html body #SiteMenu small {
+    color: #800000 !important;
+}
+
+html body #SiteMenu a:hover {
+    color: #DD0000 !important;
+}
+
+html body #SiteMenu strong {
+    color: #800000 !important;
+    font-weight: bold !important;
+}
+
+/* ===== Site menu hover ===== */
+html body #SiteMenu a:hover,
+html body #SiteMenu a:hover span,
+html body #SiteMenu a:hover div,
+html body nav#SiteMenu a:hover {
+    color: #DD0000 !important;
+    text-decoration: underline !important;
+}
+
+/* ===== Remove site menu underline ===== */
+html body #SiteMenu a:hover,
+html body #SiteMenu a:hover span {
+    text-decoration: none !important;
+}
+
+/* ===== Modals and forms → 4chan beige ===== */
+html body .StrangeBerryModal,
+html body fieldset.StrangeBerryModal,
+html body .CategoryFilters,
+html body .FormWrapper,
+html body .StampsForm {
+    background: #F0E0D6 !important;
+    background-color: #F0E0D6 !important;
+    color: #800000 !important;
+    border: 1px solid #D9BFB7 !important;
+    border-radius: 0 !important;
+}
+
+html body .StrangeBerryModal .FormTitle,
+html body .StrangeBerryModal h4,
+html body .StrangeBerryHeading,
+html body .StrangeBerryModal label,
+html body .StrangeBerryModal span,
+html body .StrangeBerryModal small {
+    color: #800000 !important;
+}
+
+html body .StrangeBerryModal select,
+html body .StrangeBerryModal input,
+html body .StrangeBerryModal textarea,
+html body .StrangeBerryModal .ContentEditable,
+html body .StrangeBerryModal .ProseMirror {
+    background: #FFFFEE !important;
+    color: #800000 !important;
+    border: 1px solid #D9BFB7 !important;
+    border-radius: 0 !important;
+}
+
+html body .StrangeBerryModal button,
+html body .StrangeBerryModal .IconButton,
+html body .StrangeBerryModal .ButtonLike {
+    background: #F0E0D6 !important;
+    color: #0000EE !important;
+    border: 1px solid #D9BFB7 !important;
+    border-radius: 0 !important;
+}
+
+html body .StrangeBerryModal button:hover,
+html body .StrangeBerryModal .IconButton:hover {
+    background: #E0D0C6 !important;
+    color: #DD0000 !important;
+}
+
+html body .StrangeBerryModal .CloseButton {
+    background: transparent !important;
+    border: none !important;
+}
+
+html body .StrangeBerryModal .Tab,
+html body .StrangeBerryModal .Tabs label {
+    background: #F0E0D6 !important;
+    color: #800000 !important;
+    border: 1px solid #D9BFB7 !important;
+}
+
+html body .StrangeBerryModal .Tab:hover,
+html body .StrangeBerryModal .Tabs label:hover {
+    background: #E0D0C6 !important;
+}
+
+html body .StampsForm h4.GreenColor { color: #117743 !important; }
+html body .StampsForm h4.RedColor { color: #DD0000 !important; }
+html body .StampsForm h4.GreyColor { color: #800000 !important; }
+
+/* ===== Post tools → plain text links ===== */
+html body .PostTools .IconOnlyButton,
+html body .Cluster.PostTools button,
+html body .Cluster.PostTools a.ButtonLike {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 4px !important;
+    box-shadow: none !important;
+}
+
+html body .PostTools spriteicon {
+    display: none !important;
+}
+
+html body .PostTools button:has(spriteicon.QuoteIcon)::after {
+    content: "[Reply]" !important;
+    color: #0000EE !important;
+    font-size: 12px !important;
+}
+html body .PostTools button:has(spriteicon.StampIcon)::after {
+    content: "[Stamp]" !important;
+    color: #0000EE !important;
+    font-size: 12px !important;
+}
+html body .PostTools button:has(spriteicon.PinIcon)::after {
+    content: "[Pin]" !important;
+    color: #0000EE !important;
+    font-size: 12px !important;
+}
+html body .PostTools button:has(spriteicon.LinkIcon)::after {
+    content: "[Copy Link]" !important;
+    color: #0000EE !important;
+    font-size: 12px !important;
+}
+html body .PostTools a:has(spriteicon.ReportIcon)::after {
+    content: "[Report]" !important;
+    color: #0000EE !important;
+    font-size: 12px !important;
+}
+html body .PostTools button:has(spriteicon.TrashIcon)::after {
+    content: "[Trash]" !important;
+    color: #0000EE !important;
+    font-size: 12px !important;
+}
+
+html body .PostTools button:hover::after,
+html body .PostTools a:hover::after {
+    color: #DD0000 !important;
+}
+
+/* ===== Remove strikethrough on post tools ===== */
+html body .PostTools button::after,
+html body .PostTools a::after,
+html body .PostTools * {
+    text-decoration: none !important;
+}
+
+/* ===== Hide pin icon, show text only ===== */
+html body .PostTools button:has(spriteicon.PinIcon) spriteicon {
+    display: none !important;
+}
+
+/* ===== Stamps log → use sticky/pin icon ===== */
+html body #SubNavigator li a[href*="stampslog"] spriteicon.StampIcon,
+html body li a[href*="logs/stampslog"] spriteicon {
+    background-image: url("//s.4cdn.org/image/sticky.gif") !important;
+    background-position: center !important;
+    background-size: contain !important;
+    width: 16px !important;
+    height: 16px !important;
+}
+
+/* ===== Post tools - full reset ===== */
+html body .Cluster.PostTools {
+    display: flex !important;
+    gap: 8px !important;
+    align-items: center !important;
+}
+
+html body .Cluster.PostTools button,
+html body .Cluster.PostTools a.ButtonLike {
+    all: unset !important;
+    cursor: pointer !important;
+    display: inline !important;
+    padding: 0 4px !important;
+    border: 1px solid transparent !important;
+}
+
+html body .Cluster.PostTools spriteicon {
+    display: none !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+    position: absolute !important;
+}
+
+html body .Cluster.PostTools button:has(.QuoteIcon)::before { content: "[Reply]"; color: #0000EE; }
+html body .Cluster.PostTools button:has(.StampIcon)::before { content: "[Stamp]"; color: #0000EE; }
+html body .Cluster.PostTools button:has(.PinIcon)::before { content: "[Pin]"; color: #0000EE; }
+html body .Cluster.PostTools button:has(.LinkIcon)::before { content: "[Copy Link]"; color: #0000EE; }
+html body .Cluster.PostTools a:has(.ReportIcon)::before { content: "[Report]"; color: #0000EE; }
+html body .Cluster.PostTools button:has(.TrashIcon)::before { content: "[Trash]"; color: #0000EE; }
+
+html body .Cluster.PostTools button:hover::before,
+html body .Cluster.PostTools a:hover::before {
+    color: #DD0000 !important;
+}
