@@ -7006,19 +7006,150 @@ h1#PageTitle {
     white-space: pre-line !important;
 }
 
-
-/* ===== EDIT BUTTON - KILL CYAN GLOW ===== */
-a.EditButton,
-a.ButtonLike.IconOnlyButton.EditButton,
-a.EditButton:hover,
-a.ButtonLike.IconOnlyButton.EditButton:hover {
-    box-shadow: none !important;
-    filter: none !important;
+/* ===== MESSAGES PANE - BLOOD RED HOVER ===== */
+#MessagesNavModule .InboxItem,
+#MessagesNavModule .InboxItem:hover,
+#MessagesNavModule button.InboxItem:hover {
+    --ButtonHoverBackgroundColor: #1a0505 !important;
     background: #1a0505 !important;
-    border: 1px solid #ff1a1a !important;
+    background-color: #1a0505 !important;
+    color: #ff1a1a !important;
+    border-color: #ff1a1a !important;
 }
 
-a.EditButton spriteicon,
-a.ButtonLike.IconOnlyButton.EditButton spriteicon {
+#MessagesNavModule .InboxItem:hover {
+    background: #2a0808 !important;
+    box-shadow: inset 0 0 8px #ff1a1a !important;
+}
+
+/* Pin button in messages */
+#MessagesNavModule .PinButton,
+#MessagesNavModule .PinButton:hover,
+#MessagesNavModule button.PinButton {
+    background: transparent !important;
+    border-color: #ff1a1a !important;
+    color: #ff1a1a !important;
+}
+
+#MessagesNavModule .PinButton spriteicon,
+#MessagesNavModule .PinButton:hover spriteicon {
     filter: brightness(0) saturate(100%) invert(13%) sepia(99%) saturate(7449%) hue-rotate(0deg) brightness(89%) contrast(119%) !important;
+}
+
+/* Unread count / statelabel in messages */
+#MessagesNavModule statelabel {
+    background: #1a0505 !important;
+    border: 1px solid #ff1a1a !important;
+    color: #ff1a1a !important;
+}
+
+/* ===== PIN / UNPIN - FORCE RED HOVER (no blue) ===== */
+button.PinButton:hover,
+.PinButton:hover,
+button[aria-label*="Pin"]:hover,
+button[aria-label*="Unpin"]:hover,
+#MessagesNavModule .PinButton:hover,
+#MessagesNavModule button.PinButton:hover {
+    background: #1a0505 !important;
+    box-shadow: 0 0 8px #ff1a1a !important;
+    border-color: #ff1a1a !important;
+    filter: none !important;
+}
+
+button.PinButton:hover spriteicon,
+.PinButton:hover spriteicon,
+#MessagesNavModule .PinButton:hover spriteicon {
+    filter: brightness(0) saturate(100%) invert(13%) sepia(99%) saturate(7449%) hue-rotate(0deg) brightness(89%) contrast(119%) drop-shadow(0 0 4px #ff1a1a) !important;
+}
+
+/* ===== TRASH ICON - FORCE RED HOVER (no blue) ===== */
+button[aria-label*="Trash"]:hover,
+button[aria-label*="Delete"]:hover,
+#MessagesNavModule button[aria-label*="Trash"]:hover,
+a[aria-label*="Trash"]:hover {
+    background: #1a0505 !important;
+    box-shadow: 0 0 8px #ff1a1a !important;
+    border-color: #ff1a1a !important;
+    filter: none !important;
+}
+
+button[aria-label*="Trash"]:hover spriteicon,
+button[aria-label*="Delete"]:hover spriteicon,
+#MessagesNavModule button[aria-label*="Trash"]:hover spriteicon {
+    filter: brightness(0) saturate(100%) invert(13%) sepia(99%) saturate(7449%) hue-rotate(0deg) brightness(89%) contrast(119%) drop-shadow(0 0 4px #ff1a1a) !important;
+}
+
+/* ===== MESSAGES - BLACK BACKGROUND, NO RED BORDER ON RICHTEXT ===== */
+#MessagesNavModule .Messages,
+#MessagesNavModule article .Messages,
+#MessagesNavModule .Message,
+#MessagesNavModule .Message .RichText,
+#MessagesNavModule .Message .RichText p {
+    background: #000 !important;
+    background-color: #000 !important;
+    border: none !important;
+}
+
+#MessagesNavModule .Message .RichText {
+    border: none !important;
+}
+
+/* ===== KILL CYAN HOVER ON ALL ICON ONLY BUTTONS ===== */
+.IconOnlyButton:hover,
+button.IconOnlyButton:hover,
+.ButtonLike.IconOnlyButton:hover {
+    background: #1a0505 !important;
+    border-color: #ff1a1a !important;
+    color: #ff1a1a !important;
+    box-shadow: 0 0 8px #ff1a1a !important;
+}
+
+.IconOnlyButton:hover spriteicon,
+button.IconOnlyButton:hover spriteicon,
+.ButtonLike.IconOnlyButton:hover spriteicon {
+    filter: brightness(0) saturate(100%) invert(13%) sepia(99%) saturate(7449%) hue-rotate(0deg) brightness(89%) contrast(119%) drop-shadow(0 0 4px #ff1a1a) !important;
+}
+
+/* ===== COG ICON SPECIFIC ===== */
+button:has(spriteicon.MiscIcon.CogIcon):hover,
+button:has(spriteicon.CogIcon):hover {
+    background: #1a0505 !important;
+    border-color: #ff1a1a !important;
+    box-shadow: 0 0 8px #ff1a1a !important;
+}
+
+button:has(spriteicon.MiscIcon.CogIcon):hover spriteicon,
+button:has(spriteicon.CogIcon):hover spriteicon {
+    filter: brightness(0) saturate(100%) invert(13%) sepia(99%) saturate(7449%) hue-rotate(0deg) brightness(89%) contrast(119%) drop-shadow(0 0 4px #ff1a1a) !important;
+}
+
+/* ===== TRASH BUTTON - FORCE RED (by icon content) ===== */
+button:has(spriteicon.TrashIcon),
+button:has(spriteicon.SubnavigatorIcon.TrashIcon),
+a:has(spriteicon.TrashIcon),
+#MessagesNavModule button:has(spriteicon.TrashIcon),
+#MessagesNavModule a:has(spriteicon.TrashIcon) {
+    background: #1a0505 !important;
+    border: 1px solid #ff1a1a !important;
+    box-shadow: none !important;
+}
+
+button:has(spriteicon.TrashIcon):hover,
+button:has(spriteicon.SubnavigatorIcon.TrashIcon):hover,
+a:has(spriteicon.TrashIcon):hover,
+#MessagesNavModule button:has(spriteicon.TrashIcon):hover {
+    background: #1a0505 !important;
+    border-color: #ff1a1a !important;
+    box-shadow: 0 0 8px #ff1a1a !important;
+}
+
+button:has(spriteicon.TrashIcon) spriteicon,
+button:has(spriteicon.SubnavigatorIcon.TrashIcon) spriteicon,
+#MessagesNavModule button:has(spriteicon.TrashIcon) spriteicon {
+    filter: brightness(0) saturate(100%) invert(13%) sepia(99%) saturate(7449%) hue-rotate(0deg) brightness(89%) contrast(119%) !important;
+}
+
+button:has(spriteicon.TrashIcon):hover spriteicon,
+#MessagesNavModule button:has(spriteicon.TrashIcon):hover spriteicon {
+    filter: brightness(0) saturate(100%) invert(13%) sepia(99%) saturate(7449%) hue-rotate(0deg) brightness(89%) contrast(119%) drop-shadow(0 0 4px #ff1a1a) !important;
 }
